@@ -17,14 +17,21 @@ Extensões essenciais:
 - REST Client
 - IntelliSense for CSS class names
 - Beautify
+- lit-html
+- Quokka
 
-Referência: <https://code.visualstudio.com/docs/editor/extension-gallery>
+Para ajudar na formatação do código:
 
-Opcionais:
+- Bracket Pair Colorizer
+- Indent Rainbow
+
+Só estéticos (dispensáveis):
 
 - Material Theme
 - One Dark Pro
 - Power Mode
+
+Referência: <https://code.visualstudio.com/docs/editor/extension-gallery>
 
 ## Configurações do Visual Studio Code
 
@@ -37,3 +44,5 @@ A partir da linha de comando, execute `npm install`, isso vai gerar o diretório
 ## Rodando
 
 Para _rodar_ um projeto execute o comando `npm start diretorio`, por exemplo, para executar o template o comando é `npm start template`. O comando abre o _browser_ padrão, mas podes abrir o projeto em qualquer _browser_ com a URL `http://127.0.0.1:8080`.
+
+Obs.: alternativamente podes usar a extensão Web Server do Chrome em <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb>, mas é fortemente sugerido usar o `npm start` para levantar um `live-server`.
