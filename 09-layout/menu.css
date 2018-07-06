@@ -1,0 +1,55 @@
+header {
+    height: 40px;
+    background-color: #822B66;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+header nav {
+    float: left;
+}
+
+h1 {
+    clear: both;
+}
+
+header form {
+    float: right;
+    margin: 5px;
+}
+
+header form input[type=submit] {
+    background-color: blueviolet;
+    padding: 3px 25px;
+    border: 1px solid;
+    display: inline-block;
+    height: 25px;
+    border-radius: 5px;
+}
+
+header form input[type=text] {
+    height: 20px;
+    font-size: 1em;
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+
+header nav li {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 10px;
+    padding: 0px 5px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid white;
+}
+header nav li:hover {
+    border-color:yellow;
+
+}

@@ -1,0 +1,11 @@
+# Escreva: GET url
+# Onde URL é o caminho da web para o recurso a solicitar!
+# Esse link _Send Request_ aparece automaticamente, desde que tenhas
+# a extensão Rest Client e salves o arquivo como .http
+GET  http://dados.fee.tche.br/ckan-download/fee-2013-mun-taxa-de-abandono-total-102596.csv
+
+# Note que só muda o ano na URL!!!
+
+### quase esqueci, é necessário 3 hashes para separar as requests!
+
+GET http://dados.fee.tche.br/ckan-download/fee-1999-mun-taxa-de-abandono-total-102596.csv

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Funções!</title>
+  </head>
+  <body>
+    <script>
+    const x = 3;
+    const y = 4;
+
+    let r = 0; // multiplicar
+    for (let i = 0; i < x; i++) r = r + y;
+    console.log(r);
+
+    const a = 2048;
+    const b = 4;
+    // multiplicar
+    r = 0;
+    for (let i = 0; i < b; i++) r = r + a;
+    console.log(r); // 8192
+
+    mult(7, 3);
+
+    // declaração de função
+    // sofrem "hoisting" (ELEVAÇÃO!)
+    function mult(c, d) { // entrada c, d
+      let r = 0;
+      for (let i = 0; i < c; i++) r = r + d;
+      // não se usa saída na função
+      // console.log(r); // saída
+      return r;
+    }
+
+    // invocar/chamar/executar uma função
+    mult(x, y);
+    mult(a, b);
+    // Casos de Teste
+    mult(10000, 2); // 20000
+    console.log(mult(10000, 2)); // 20000
+    // alert(mult(10000, 2)); // 20000
+    mult(5, 10); // 50
+    mult(36234, 83874783); // 3039118887222
+    let q = mult(8, 9);
+    console.log(q);
+    // Caso de Teste é feito com uma assertiva
+    // assertiva === afirmação! VERDADE/FATO
+    console.assert(q === 72, 'q = 8 * 9, deve ser 72');
+    console.assert(mult(2, 3) === 6, 'mult de 2 e 3 deve ser 6');
+    // console.assert(mult(-2, 3) === -6, 'mult de -2 e 3 deve ser -6');
+
+    console.log(potencia(2, 4));
+    console.assert(potencia(2, 4) === 16, '2 ^ 4 === 16');
+
+    console.assert(potencia(7, 5) === 16807, '7 ^ 5 === 16807');
+    console.log(potencia(5, 0));
+    console.assert(potencia(5, 0) === 1, 'qualquer num elevado a 0 é 1');
+
+    function potencia(base, exp) {
+      // caso especial exp 0
+      // if (exp === 0) return 1;
+      let r = 1;
+      for (let i = 0; i < exp; i++) {
+        r = mult(base, r);
+      }
+      return r;
+    }
+
+    console.log(repeat('%', 4)); // %%%%
+    console.assert(repeat('%', 4) === '%%%%');
+    console.assert(repeat('.', 3) === '...');
+
+    function repeat(c, n) {
+      let r = '';
+      for (let i = 0; i < n; i++) r += c;
+      return r;
+    }
+
+    function padRight(s, t, c) {
+      return s + repeat(c, t - s.length);
+    }
+
+    function padLeft(s, t, c) {
+      return repeat(c, t - s.length) + s;
+    }
+
+    // teste*****
+    console.log(padRight('teste', 10, '*'));
+    console.assert(padRight('teste', 10, '*') === 'teste*****', 'teste com pad 10 * teste*****');
+    console.assert(padRight('palavra', 5, '-') === 'palavra', 'tamanho igual ou inferior a palavra retorna igual');
+
+    // ######info
+    console.log(padLeft('info', 10, '#'));
+    console.assert(padLeft('info', 10, '#') === '######info', 'padleft info 10 === # ######info');
+
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Links e Divisões</title>
+    <style>
+        h1 { /* seletor (todos os H1) */
+            background-color: gainsboro;
+            font-family: 'Arial';
+        }
+        section h2 { /* h2 dentro de section */
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        section.menor { /* section com a class menor */
+            background-color: papayawhip;
+            font-size:0.5em;
+        }
+        h3 {
+            margin-top:3em;
+            color: rgb(145, 0, 161);
+        }
+    </style>
+    <!-- link RELativo a folha de estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div id="header"></div>
+    <div id="main"></div>
+    <div id="footer"></div> -->
+    <header id="topo">
+        <!-- CSS in-line: desencorajado (não façam) -->
+        <h1 style="color:hotpink; font-size:3em;">DBO site! Yha!!!</h1>
+        <nav>
+            <a href="#av" class="botao">
+                Atividades
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="noticias">
+            <h2>Notícias</h2>
+            <article>
+                <h3>
+                    Breve atividade presencial sem mouse
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas itaque illo veritatis cum ab eum repudiandae libero odio natus placeat maxime, et nemo impedit nobis officia sapiente repellendus dicta pariatur!
+                </p>
+                <a href="semmouse.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Outra notícias</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ducimus sequi sit modi suscipit. Suscipit sunt officiis natus modi quibusdam! Commodi magnam praesentium, maxime natus est illo ea obcaecati at?</p>
+                <a href="outra.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Mais uma</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur repellendus minima error obcaecati sunt quaerat voluptatem magni distinctio quam nesciunt voluptate neque excepturi, porro repudiandae hic quia placeat ea ipsam.</p>
+                <a href="maisuma.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Mais uma</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur repellendus minima error obcaecati sunt quaerat voluptatem magni distinctio quam nesciunt voluptate neque excepturi, porro repudiandae hic quia placeat ea ipsam.</p>
+                <a href="maisuma.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Mais uma</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur repellendus minima error obcaecati sunt quaerat voluptatem magni distinctio quam nesciunt voluptate neque excepturi, porro repudiandae hic quia placeat ea ipsam.</p>
+                <a href="maisuma.html">Leia mais</a>
+            </article>
+            <article>
+                <h3>Mais uma</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur repellendus minima error obcaecati sunt quaerat voluptatem magni distinctio quam nesciunt voluptate neque excepturi, porro repudiandae hic quia placeat ea ipsam.</p>
+                <a href="maisuma.html">Leia mais</a>
+            </article>
+        </section>
+        <section class="atividades maior">
+            <h2 id="av">
+                Atividades
+                <a href="#topo">&uarr;</a>
+            </h2>
+            <article>
+                <h3>First Contact¹: lógica, especificações, implementação, testes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam voluptas mollitia voluptates doloremque consequuntur vel repudiandae illo exercitationem corporis consequatur. Omnis sed facilis tenetur ducimus accusamus dolorum itaque libero deleniti?</p>
+                <a href="https://profmarciotorres.github.io/atividade.html?dbo-2018/atividade/avaliada/1.md" target="_blank">Ler mais</a>
+            </article>
+            <article>
+                <h3>Logic + User Interface: funções, DOM, inputs, outputs, eventos</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus temporibus, assumenda quia blanditiis corporis consectetur velit ut, totam rerum maiores consequuntur animi sed molestias. Exercitationem numquam alias minima impedit officiis.</p>
+                <a target="_blank" href="https://profmarciotorres.github.io/atividade.html?dbo-2018/atividade/avaliada/2.md">Leia mais</a>
+            </article>
+        </section>
+    </main>
+    <aside>
+
+    </aside>
+    <footer>
+        <section class="atividades menor">
+            <h2>Atividades</h2>
+            <a href="https://profmarciotorres.github.io/atividade.html?dbo-2018/atividade/avaliada/1.md">#1</a>
+            <a href="https://profmarciotorres.github.io/atividade.html?dbo-2018/atividade/avaliada/2.md">#2</a>
+        </section>
+    </footer>
+</body>
+</html>

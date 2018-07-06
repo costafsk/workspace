@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spot!</h1>
+    <p>Não logado</p>
+    <button>LOGIN</button>
+    <button>LOGOUT</button>
+<script>
+    const CLIENT_ID = '818a4bf0217d40719639ec15b3501acb';
+    const REDIRECT_URI = 'http://localhost:8080/callback/';
+    const SCOPE = 'user-read-private%20user-read-email';
+    const STATE = '';
+    const URL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${SCOPE}&response_type=token`;
+
+    const buttonLogin = document.querySelector('button');
+    buttonLogin.addEventListener('click', function(e) {
+        window.location = URL;
+    });
+
+</script>
+</body>
+</html>

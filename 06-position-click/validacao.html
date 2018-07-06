@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validação</title>
+    <style>
+        input {
+            border: 1px solid gray;
+            outline: none;
+        }
+        input:focus {
+            background-color: silver;
+        }
+        span.mensagem { /* 1em = 16px */
+            font-size: 0.5em;
+            color: darkred;
+            font-family: sans-serif;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" name="cpf" id="cpf"
+        size="11" maxlength="11" autofocus>
+    <span class="mensagem">CPF inválido</span>
+
+<script>
+    const input = document.querySelector('input');
+    const msg = document.querySelector('span');
+    input.addEventListener('keyup', function(e) {
+        msg.style.display = 'none';
+        const v = input.value;
+        if (v.length < 11) {
+            msg.style.display = 'inline';
+        } else {
+            for (let c of v.split('')) {
+                if ( ! Number.isInteger(parseInt(c))) {
+                    msg.style.display = 'inline';
+                    break;
+                }
+            }
+        }
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

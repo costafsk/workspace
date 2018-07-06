@@ -1,0 +1,136 @@
+<!-- tag html -->
+<html>
+<head>
+    <title>
+        Aula de DBO
+    </title>
+</head>
+<body>
+    Miolo da <b>página</b>
+    <br>
+    <br> Teste de html
+<script>
+// adeus, alert :~(
+alert('estou vivo, eu acho!');
+// imprimir no console!
+console.log('mensagem no console');
+// é possível imprimir na página
+document.write('<br>texto do javascript<br>');
+document.write(new Date());
+// digam adeus ao prompt, e ao var
+var nome = prompt('Qual é seu nome?'); // string
+console.log(nome);
+console.log(typeof(nome));
+// ECMAScript6/JavaScript2015
+// declaração e atribuição de variável
+let idade = 41; // number
+// declaração de variável
+let signo;
+// atribuição
+signo = 'dinossauro';
+console.log(signo);
+signo = 'não existe';
+console.log(signo);
+// CONSTante
+const nacionalidade = 'brasileira';
+// nacionalidade = 'argentina';
+// JavaScript tem 5 tipos primitivos
+const a = '5'; // string
+const b = 1;  // number // 1 é uma literal constante
+const c = null;
+const d = undefined;
+const e = true; // boolean
+
+let f = 2 + b;
+let g = a + 2;
+// == e !=   veracidade/falsidade
+// digam adeus ao ==
+if (a == 5) {
+    console.log('a vale 5');
+}
+// if (expressão booleana)
+if (a === 5) { // !==  igualdade/diferença estrita
+    console.log('a vale 5 numérico');
+}
+const h = 7 > 2;
+if (h) console.log('h é verdadeiro');
+
+const i = 7;
+if (i > 20) {
+    console.log('i é maior que 20');
+} else if (i > 15) {
+    console.log('i é maior que 15');
+} else if (i > 10) {
+    console.log('i é maior que 10');
+} else {
+    console.log('i não é maior que 10');
+}
+
+if (i > 0 && i < 10) {
+    console.log('i está entre 1 e 9');
+}
+// | pipe!
+if (i == 0 || i == 10) {
+    console.log('i vale 0 ou 10');
+}
+
+const j = 2;
+switch(j) {
+    case 1: {
+        console.log('j == 1');
+        break;
+    }
+    case 2: { // fallback
+        console.log('j == 2');
+    }
+    case 3: {
+        console.log('j == 3');
+    }
+    default: {
+        console.log('j != 1,2,3');
+    }
+}
+
+// expressão ternária
+const k = j > 5 ? 'j maior que 5' : 'j <= 5';
+
+// laços/loop/iterações
+let l = 1; // declaração
+while (l <= 10) { // condição
+ console.log('iteração: ', l); // instrução
+ l = l + 1; // l += 1; // l++; // atualização
+}
+let soma = 0;
+for (let m = 0; m < 10; m++) {
+  console.log('iteração: ', m);
+  soma += m;
+}
+console.log(soma);
+              // 0, 1
+const nomes = ['Vitor', 'Cassiana',
+               'Rafael', 'Thiago'];
+              // 2, 3
+console.log(nomes[1]);
+console.log(nomes[3]);
+// comprimento do vetor
+console.log(nomes.length);
+console.log(nomes[nomes.length - 1]);
+console.log(nomes[10]);
+// iterar (percorrer) vetor
+// ind é um índice
+for (let ind = 0; ind < nomes.length;
+     ind++) {
+  console.log(nomes[ind]);
+}
+// for each (para cada)
+// percorrer o vetor (array)
+for (let nome of nomes) {
+    console.log(nome);
+}
+
+</script>
+
+    Mais um pouco de texto
+
+</body>
+</html>

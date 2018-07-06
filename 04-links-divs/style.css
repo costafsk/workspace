@@ -1,0 +1,20 @@
+a.botao {
+    color:white;
+    background-color: blueviolet;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-family: Arial, Helvetica, Tahoma, sans-serif;
+    border-style: solid;
+    border-width: 2px;
+    border-color:black;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+}
+a.botao:hover {
+    background-color:deeppink;
+    cursor:crosshair;
+}

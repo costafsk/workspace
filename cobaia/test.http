@@ -1,0 +1,9 @@
+###
+
+GET https://cors.io/?http://dados.fee.tche.br/ckan-download/fee-2010-mun-taxa-de-analfabetismo-de-pessoas-de-15-anos-ou-mais-103163.csv
+
+###
+
+GET http://dados.fee.tche.br/ckan-download/fee-2010-mun-taxa-de-analfabetismo-de-pessoas-de-15-anos-ou-mais-103163.csv
+
+###

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Array.prototype.shuffle = function () {
+            this.sort((n) => Math.random() - 0.5);
+        };
+
+        Array.prototype.popn = function (n) {
+            if (this.length === 0) return null;
+            if (this.length === 1) return this.pop();
+            return [this.pop(), this.pop()];
+        };
+
+        const names = [
+            'Gabriely',
+            'Vitor',
+            'Cassiana',
+            'Guilherme',
+            'Suélen',
+            'Luan',
+            'Igor',
+            'Pedro',
+            'Julia',
+            'Carla',
+            'Bruno',
+            'Olmedo',
+            'Bernardo',
+            'Adrian',
+            'Maurício',
+            'Thamyris',
+            'Klaus',
+            'Gabriel',
+            'Rogério',
+            'Rafael',
+            'Thiago',
+            'Ana Clara',
+            'Laisa',
+            'Ana Claudia',
+            'Marina',
+            'Leonardo',
+            'Diego'
+        ];
+
+        document.write(names.length);
+
+        names.shuffle();
+
+        document.body.innerHTML += '<ul>';
+        do {
+            // console.log(names.popn(2));
+            document.body.innerHTML += `<li>${names.popn(2)}</li>`;
+        } while (names.length > 0);
+        document.body.innerHTML += '</ul>';
+    </script>
+
+
+
+
+
+</body>
+</html>

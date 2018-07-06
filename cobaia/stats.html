@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="ano">Ano:</label>
+        <input type="number" name="ano" id="ano">
+        <label for="temp">Temp:</label>
+        <input type="number" name="temp" id="temp">
+        <input type="submit" value="Cadastrar">
+    </form>
+    <form>
+        <h2>Gerar tabela</h2>
+        <input type="checkbox" name="fa" id="fa">Frequência Absoluta <br>
+        <input type="checkbox" name="fr" id="fr">Frequência Relativa <br>
+        <input type="submit" value="Gerar">
+    </form>
+
+<script>
+    const intervalos = [];
+const dados = [{temp: 10},
+{ temp: 5 }, { temp: 15 },
+{ temp: 50 }, { temp: 15 },
+{ temp: 15 }, { temp: 29 },
+{ temp: 30 }];
+const form1 = document.querySelector('form');
+const form2 = document.querySelectorAll('form')[1];
+
+form1.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const d = {
+        ano: this.ano.value,
+        temp: parseInt(this.temp.value)
+    };
+    dados.push(d);
+});
+
+form2.addEventListener('submit', function(e) {
+    e.preventDefault();
+    dados.sort(function(a,b) { return a.temp > b.temp ? 1 : -1; });
+    const min = dados[0].temp;
+    const max = dados[dados.length -1 ].temp;
+    const amp = max - min;
+    console.log(min);
+    console.log(max);
+    console.log(amp);
+    const dif = amp / 3; // 3 classes
+
+    let mini = min;
+    let maxi = mini + dif;
+    for (let i = 0; i < 3; i++) {
+        intervalos.push({ min: mini, max: maxi, cont: 0, fr: 0 });
+        mini += dif;
+        maxi += dif;
+    }
+    console.table(intervalos);
+    for (let d of dados) {
+        const t = d.temp;
+        for (let i of intervalos) {
+            if (t >= i.min && t <= i.max) {
+                i.cont++;
+            }
+        }
+    }
+    console.table(intervalos);
+
+
+    let tbody = document.querySelector('tbody');
+    for (const i of intervalos) {
+        let tr = `<tr><td>${i.min} - ${i.max}</td>`;
+        tr += `<td ${this.fa.checked ? '' : 'class="hid"'}>${i.cont}</td>`
+        tr += `</tr>`;
+        tbody.innerHTML += tr;
+    }
+});
+</script>
+
+<table>
+    <thead>
+        <th>classe</th><th>freq absoluta</th>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+    /* seleciona tudo */
+    color: darkgrey;
+}
+
+div {
+    background-color: cyan;
+    width: 12.5%;
+    display: inline-block;
+    height: 150px;
+    color: black;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    div {
+        width: 25%;
+    }
+}
+
+@media (max-width: 320px) {
+    div {
+        width: 50%;
+    }
+}
+
+div:first-of-type {
+    background-color: orange;
+}
+
+div:nth-of-type(4) {
+    background-color: coral;
+}
+
+div:last-of-type {
+    background-color: bisque;
+}
+
+h2 {
+    /* clear: both; */
+}
+

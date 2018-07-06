@@ -1,0 +1,38 @@
+* { /* seleciona tudo */
+    color: darkgrey;
+}
+
+div {
+    background-color: cyan;
+    /* width: 108px; */
+    /* width: 10.546875%; */
+    width: 10.5%;
+    height: 150px;
+    float: left;
+    font-size: 16pt;
+    color: black;
+    margin: 1%;
+    /* top  right bottom left */
+    /* padding: 10px 5px 10px 5px;*/
+    padding: 1%;
+    /* padding: 0.9765625% 0.48828125%; */
+    border: 5px solid black;
+
+    box-sizing: border-box;
+
+    /* top/bottom   right/left  */
+    /* margin: 10px; */
+    /* margin: 0.9765625%; */
+}
+div:first-of-type {
+    background-color: orange;
+}
+div:nth-of-type(4) {
+    background-color: coral;
+}
+div:last-of-type {
+    background-color: bisque;
+}
+h2 {
+    clear: both;
+}
